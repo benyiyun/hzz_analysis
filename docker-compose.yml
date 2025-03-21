@@ -1,0 +1,18 @@
+
+services:
+  processor:
+    build: ./data_processor
+    container_name: processor_container
+    volumes:
+      - shared_data:/app/shared
+  plotter:
+    build: ./data_plotter
+    container_name: plotter_container
+    volumes:
+      - shared_data:/app/shared
+    depends_on:
+      - processor
+
+volumes:
+  shared_data:
+
