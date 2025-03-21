@@ -1,0 +1,7 @@
+uproot
+awkward
+vector
+numpy==1.23
+aiohttp
+requests
+
